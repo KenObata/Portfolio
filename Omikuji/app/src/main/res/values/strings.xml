@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Omikuji</string>
+    <string name="result_text">...</string>
+    <string name="button_text">Your fortune for today is...</string>
+</resources>
