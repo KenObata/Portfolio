@@ -59,3 +59,26 @@ function showLine() {
     console.log('------------');
 }
 
+//function formula
+/*const sum = function(a,b,c){
+    return a+b+c;
+};*/
+
+const sum = (a,b,c) => a+b+c;
+
+const total = sum(5,4,3);
+console.log(total);
+
+//Array
+{
+    const scores = [80, 90, 40];
+    for(let i =0; i <scores.length; i++){
+        console.log(scores[i]);
+    }
+}
+
+
+
+
+
+
