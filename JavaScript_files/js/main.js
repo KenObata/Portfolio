@@ -71,7 +71,18 @@ console.log(total);
 
 //Array
 {
-    const scores = [80, 90, 40];
+    const scores = [80, 90, 40,70];
+    /*
+    scores.push(60, 50,100);//insert
+    scores.shift();//remove first item, 80
+    */
+    /* splice deletes given index*/
+    scores.splice(1,1, 50); //start from 90, delete 90, and insert 50.
+    
+    const otherScores =[10, 20];
+    //insert elements in otherScores into scores.
+    const scores2 = [80, 90, 40,70, ...otherScores];
+    console.log(scores2);
     for(let i =0; i <scores.length; i++){
         console.log(scores[i]);
     }
