@@ -142,10 +142,38 @@ console.log(total);
     console.log(point);
     
     /*We cannot use forEach to objects!!*/
+    const keys = Object.keys(point);
+    keys.forEach(key => {
+        console.log('Key:'+key);
+    });
     
-    
+    const geometry_points = [
+        {x:30, y:20},
+        {x:10, y:50},
+        {x:40, y:40},
+    ];
+    console.log(geometry_points[1].x);
 }
 
+{
+    let array=[1,2];
+    let y=array; //y points address of x
+    array[0]=5;
+    console.log(array);
+    console.log(y); //
+    
+    /* output is: 
+    array =[5,2]
+    y = [5,2] since y points x, y outputs same data of x
+    
+    we want y=[1,2]
+    */
+    //to avoid this, we use spread function
+    let array2 =[...array];
+    array[0]=8;
+    console.log(array); 
+    console.log(array2); 
+}
 
 
 
