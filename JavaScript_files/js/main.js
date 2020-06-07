@@ -283,3 +283,19 @@ console.log(total);
     
     showTime(); //show current time after 1000 milli seconds.
 }
+
+/* Exception*/
+{
+    const name ='obata';
+    const name2 =5;
+    
+    try{
+    console.log(name.toUpperCase());
+    console.log(name2.toUpperCase());
+    } catch (error){
+        console.log(error);
+    }
+}
+
+
+
