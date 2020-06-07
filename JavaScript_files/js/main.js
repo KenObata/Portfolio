@@ -176,5 +176,11 @@ console.log(total);
 }
 
 
-
+{
+    /*Strings*/
+    const str = 'hello';
+    console.log("str length: "+str.length);
+    
+    console.log(str.substring(0,str.length));
+}
 
