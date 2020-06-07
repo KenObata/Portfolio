@@ -86,6 +86,24 @@ console.log(total);
     for(let i =0; i <scores.length; i++){
         console.log(scores[i]);
     }
+    
+    /*const [a,b, ...others] = scores;
+    console.log(a);
+    console.log(b);
+    console.log(others);
+    */
+    
+    scores.forEach((score, index) => {
+        console.log('Score '+index +': ' + score);
+    });
+    
+    //map: add 20 yen for each score.
+    const prices = [180 , 190, 200];
+    
+    const updatePrices = price.map((price) => {
+        return price + 20;
+    });
+    
 }
 
 
