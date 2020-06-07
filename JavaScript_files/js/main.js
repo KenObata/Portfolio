@@ -182,5 +182,87 @@ console.log(total);
     console.log("str length: "+str.length);
     
     console.log(str.substring(0,str.length));
+    
+    //Ex. concatenate calendar dates
+    const dates = [2019, 11, 14];
+    console.log(dates.join('/'));
+    
+    const times ='22:55:48' ;
+    console.log(times.split(':'));
+    const [hour, min, sec] = times.split(':');
+    
+    const times2 = times.split(':');
+    console.log(times2);
+}
+
+{
+    let sum =0;
+    const integers = [10,3,9];
+    for(let i =0; i < integers.length; i++){
+        sum += integers[i];
+        console.log("sum:"+sum);
+    }
+    const avg = sum / integers.length;
+    console.log(Math.floor(avg)); //7
+    console.log(Math.round(avg)); //7
+    console.log(avg.toFixed(3)); //7.333
+    
+}
+/*Use Math.random*/
+{
+    //want random 0,1,2
+    let n = 2;
+    const random_int = Math.floor(Math.random()*(n+1)); //get only integer from 0 to n
+    console.log(random_int);
+    
+    //want random 1,2
+    let min = 1
+    const random_int2 = Math.floor(Math.random()*(n+1-min)) + min; //get only 
+    console.log(random_int2);
+}
+
+/*get Date object*/
+{
+    const date_yyyymmdd = new Date();// NG:date() OK:Date()
+    console.log(date_yyyymmdd);
+    
+    /*
+    date_yyyymmdd.getFullYear(); //2020
+    date_yyyymmdd.getMonth(); [0,1,...11] and 0 means January
+    date_yyyymmdd.getDate(); [1,2,...31]
+    date_yyyymmdd.getHours();
+    date_yyyymmdd.getMinutes();
+    date_yyyymmdd.getSeconds();
+    */
+    
+    const sample_date = new Date(2020, 6, 1); //2020/June/1st/00/00/00
+    console.log("sample_date:"+sample_date);   
+}
+
+/*use alert and confirm*/
+{
+    const response = confirm("Are you sure to delete?");
+    if(response){
+        console.log("Your object is deleted.");
+    }
+    else {
+        console.log('Cancelled.');
+    }
+}
+
+/*Use interval*/
+{
+    let counter =0;
+    function showTime() {
+        console.log(new Date());
+        
+        counter ++;
+        if(counter > 5){
+            clearInterval(intervalId); //stop showing if couter > 5
+        }
+    }
+    
+    const intervalId = setInterval(showTime, 1000);
+    
 }
 
