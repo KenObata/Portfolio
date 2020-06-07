@@ -100,12 +100,51 @@ console.log(total);
     //map: add 20 yen for each score.
     const prices = [180 , 190, 200];
     
-    const updatePrices = price.map((price) => {
+    const updatePrices = prices.map((price) => {
         return price + 20;
     });
     
+    const numbers =[1,4,7,8,10];
+    /*const evenNumbers = numbers.filter(number => {
+        if(number % 2 === 0) {
+           return true;
+           }
+        else {
+           return false;
+           }
+    });*/
+    const evenNumbers = numbers.filter((number) => {
+        if(number % 2 === 0){
+            return number;
+        }
+        else{
+            return false;
+        }
+    });
+    console.log(evenNumbers);
 }
 
+{
+    /*create object in 2D*/
+    // const point = [100, 180];
+    const otherMember ={
+        r:4,
+        color: 'red'
+    };
+    const point = {x:100, y:180, ...otherMember};
+    console.log(point);
+    point.x =120; //update x
+    console.log(point);
+    
+    point.z = 90;
+    console.log(point);
+    delete point.z;
+    console.log(point);
+    
+    /*We cannot use forEach to objects!!*/
+    
+    
+}
 
 
 
