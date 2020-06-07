@@ -251,6 +251,7 @@ console.log(total);
 }
 
 /*Use interval*/
+/*
 {
     let counter =0;
     function showTime() {
@@ -265,4 +266,20 @@ console.log(total);
     const intervalId = setInterval(showTime, 1000);
     
 }
+*/
 
+/*Use setTimeout()*/
+{
+    let counter =0;
+    function showTime() {
+        console.log(new Date());
+        const timeoutId = setTimeout(showTime, 1000);
+        
+        counter ++;
+        if(counter > 2){
+            clearTimeout(timeoutId); //stop showing if couter > 5
+        }
+    }
+    
+    showTime(); //show current time after 1000 milli seconds.
+}
