@@ -360,7 +360,14 @@ console.log(total);
         
         like()
         {
-            this.likeCOunt++;
+            this.likeCount++;
+        }
+        
+        /*static method:this function is called within a class.
+        Be careful, you cannot use 'this.' in the static function.
+        */
+        static showInfo(){
+            console.log('Post class version:1.0');
         }
     }
     const posts =[
@@ -372,6 +379,7 @@ console.log(total);
     
     posts[0].display_post();
     posts[1].display_post();
+    Post.showInfo();
 }
 
 
