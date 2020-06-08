@@ -298,4 +298,84 @@ console.log(total);
 }
 
 
+/* class */
+{
+    const posts =[
+      {
+        text: 'I am studying JavaScript.',
+        likeCount:0,
+
+      },
+      {
+        text:'Programming in JavaScript is fun!',
+        likeCount: 0,
+      }
+    ];
+    
+    function display_post(post){
+        console.log(post.text +' - '+ post.likeCount+' likes.');
+    }
+    
+    display_post(posts[0]);
+}
+
+/* Now, we will include the function display_post inside of the posts object*/
+/* This function is not efficient since we need to create two function in each posts object.
+{
+    const posts =[
+      {
+        text: 'I am studying JavaScript.',
+        likeCount:0,
+        //no need to have parameter since this function is inside of the posts.
+        display_post: function()
+        {
+            console.log(this.text +' - '+ this.likeCount+' likes.');
+        }
+      },
+      {
+        text:'Programming in JavaScript is fun!',
+        likeCount: 0,
+      }
+    ];
+    
+    posts[0].display_post();
+}
+*/
+
+/*Therefore, create class and constructor*/
+{
+    class Post
+    {
+        constructor(text) 
+        {
+            this.text = text;
+            this.likeCount=0;
+        }
+        
+        //no need to have parameter since this function is inside of the posts.
+        display_post()
+        {
+            console.log(this.text +' - '+ this.likeCount+' likes.');
+        }
+        
+        like()
+        {
+            this.likeCOunt++;
+        }
+    }
+    const posts =[
+        new Post('this is a new Post1.'),
+        new Post('this is a new Post2.'),
+    ];
+    
+    posts[0].like();
+    
+    posts[0].display_post();
+    posts[1].display_post();
+}
+
+
+
+
+
 
